@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-import { Storage } from '@ionic/storage';
+import { StatusBar } from '@ionic-native/status-bar'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NewPlacePage } from '../pages/new-place/new-place';
@@ -26,7 +25,7 @@ import { AgmCoreModule } from '@agm/core';
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyC5kTKWGG2EiAv7NJiUhNwJfgysOhhnCXw '    
+      apiKey: 'AIzaSyC5kTKWGG2EiAv7NJiUhNwJfgysOhhnCXw'    
     })
   ],
   bootstrap: [IonicApp],
@@ -39,6 +38,6 @@ import { AgmCoreModule } from '@agm/core';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, PlacesService, Geolocation]
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, PlacesService, Storage, Geolocation]
 })
 export class AppModule {}

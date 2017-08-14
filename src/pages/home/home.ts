@@ -25,7 +25,7 @@ export class HomePage {
    	.then(
    		(places) => this.places = places
    	); 
-   	console.log(this.places);
+   	
   }
 
   onLoadNewPlace() {
